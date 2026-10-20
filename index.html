@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f8f2">
+<title>Кролипедия — интерактивная энциклопедия кроликов</title>
+<style>
+:root{--bg:#f6f8f2;--paper:#fff;--ink:#24352c;--muted:#718075;--green:#477a5a;--green2:#e3f0e4;--line:#e4eae1;--orange:#f2b66d;--shadow:0 12px 34px #2a47220c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}button,input{font:inherit}button{cursor:pointer}.topbar{position:sticky;top:0;z-index:10;background:#f6f8f2eF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:9px;font-weight:900;font-size:1.18rem;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--green);color:white;font-size:21px}.search{flex:1;position:relative;max-width:460px;margin-left:auto}.search input{width:100%;border:1px solid var(--line);border-radius:13px;padding:11px 14px 11px 40px;background:white;outline:none}.search input:focus{border-color:#8ab494;box-shadow:0 0 0 3px #477a5a15}.search span{position:absolute;left:14px;top:9px;color:var(--muted)}.nav button,.theme-btn{border:1px solid var(--line);background:white;border-radius:12px;padding:9px 12px;color:var(--ink)}.wrap{max-width:1180px;margin:auto;padding:28px 22px 70px}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}.hero-copy{padding:35px 10px 28px 0}.eyebrow{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border-radius:999px;background:var(--green2);color:var(--green);font-weight:750;font-size:.83rem}.hero h1{font-size:clamp(2.4rem,5vw,4.6rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0}.hero h1 span{color:var(--green)}.hero p{font-size:1.07rem;max-width:570px;color:#627166}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.primary,.secondary{border:0;border-radius:13px;padding:12px 17px;font-weight:800}.primary{background:var(--green);color:white}.secondary{background:white;border:1px solid var(--line);color:var(--ink)}.hero-art{position:relative;min-height:350px;border-radius:28px;overflow:hidden;background:radial-gradient(circle at 70% 25%,#fff9d9 0,transparent 28%),linear-gradient(145deg,#e5f0df,#c8dfc8);box-shadow:var(--shadow)}.hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;background:#ffffff45}.hero-art:before{width:220px;height:220px;right:-35px;top:-55px}.hero-art:after{width:150px;height:150px;left:-40px;bottom:-40px}.hero-rabbit{position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(130px,19vw,230px);filter:drop-shadow(0 15px 5px #4a694022);animation:bob 3s ease-in-out infinite;z-index:1}.float-label{position:absolute;z-index:2;background:#ffffffdc;backdrop-filter:blur(8px);border:1px solid #fff;border-radius:14px;padding:10px 13px;box-shadow:var(--shadow);font-size:.86rem;font-weight:750}.float-label.one{top:24px;left:20px}.float-label.two{right:20px;bottom:25px}.float-label small{display:block;font-weight:500;color:var(--muted)}@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0 36px}.stat{background:white;border:1px solid var(--line);border-radius:17px;padding:16px}.stat strong{display:block;font-size:1.55rem;letter-spacing:-.04em}.stat span{color:var(--muted);font-size:.87rem}.layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:22px;align-items:start}.sidebar{position:sticky;top:83px;background:white;border:1px solid var(--line);border-radius:18px;padding:15px}.side-title{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:850;margin:5px 9px 9px}.side-link{display:flex;align-items:center;gap:10px;padding:10px 11px;border-radius:11px;color:#526257;text-decoration:none;font-weight:650;margin:2px 0}.side-link:hover,.side-link.active{background:var(--green2);color:var(--green)}.content{min-width:0}.section{scroll-margin-top:88px;margin-bottom:23px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:0 0 14px}.section h2{font-size:1.7rem;letter-spacing:-.04em;margin:0}.section-head p{margin:3px 0 0;color:var(--muted);font-size:.93rem}.pill{background:#f1f4ed;border-radius:999px;padding:5px 9px;font-size:.78rem;color:#5e7062;font-weight:750}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:var(--shadow);min-width:0}.card-icon{width:45px;height:45px;border-radius:14px;background:#f0f5ec;display:grid;place-items:center;font-size:25px;margin-bottom:13px}.card h3{margin:0 0 7px;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.92rem}.text-card{background:white;border:1px solid var(--line);border-radius:18px;padding:21px}.text-card p{color:#5c6a60;margin:8px 0}.callout{padding:15px 17px;border-radius:14px;background:#fff5e5;border:1px solid #f3e0bd;color:#6d512c;margin-top:13px}.species{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.species .card{display:flex;gap:13px}.species-art{flex:0 0 70px;width:70px;height:82px;border-radius:15px;background:linear-gradient(145deg,#e8f1e4,#d4e5d0);display:grid;place-items:center;font-size:44px}.species p{font-size:.86rem}.model-panel{display:grid;grid-template-columns:1.1fr .9fr;gap:15px}.viewer{position:relative;min-height:330px;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 50% 38%,#fff 0,#e8f0e6 75%);border:1px solid var(--line)}#modelCanvas{width:100%;height:330px;display:block}.viewer-tip{position:absolute;bottom:12px;left:12px;right:12px;background:#ffffffd9;border:1px solid #ffffff;padding:8px 11px;border-radius:10px;font-size:.78rem;color:#536358;pointer-events:none}.model-fallback{height:330px;display:grid;place-items:center;text-align:center;padding:25px;color:var(--muted)}.model-fallback span{font-size:88px;display:block}.model-info{padding:8px 0}.model-info h3{font-size:1.3rem;margin:0 0 8px}.model-info p{color:var(--muted)}.model-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.model-controls button{background:white;border:1px solid var(--line);border-radius:10px;padding:9px 11px}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:13px}.fact{padding:11px;border-radius:12px;background:#f3f6f0}.fact b{display:block;font-size:1.03rem}.fact span{font-size:.78rem;color:var(--muted)}.care-list{display:grid;gap:10px}.care-item{display:flex;gap:12px;padding:13px;background:white;border:1px solid var(--line);border-radius:14px}.care-item .check{flex:0 0 29px;height:29px;border-radius:9px;background:var(--green2);color:var(--green);display:grid;place-items:center;font-weight:900}.care-item b{display:block}.care-item span{color:var(--muted);font-size:.9rem}.quiz{background:#23392b;color:white;border-radius:20px;padding:23px}.quiz .pill{background:#ffffff20;color:#d9ebd9}.quiz h3{font-size:1.4rem;margin:10px 0}.quiz-options{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:15px}.quiz-options button{border:1px solid #ffffff30;background:#ffffff0d;color:white;padding:12px;border-radius:12px;text-align:left}.quiz-options button:hover{background:#ffffff1c}.quiz-options button.correct{background:#2f8150;border-color:#65c78b}.quiz-options button.wrong{background:#8d4545;border-color:#d67b7b}.quiz-feedback{margin-top:12px;min-height:24px;color:#d6e7d6}.quiz-next{margin-top:10px;border:0;border-radius:10px;padding:10px 13px;background:#f0d7a7;color:#45351b;font-weight:800}.empty{display:none;padding:25px;text-align:center;background:white;border:1px dashed var(--line);border-radius:15px;color:var(--muted)}footer{padding:25px 0 0;color:var(--muted);font-size:.86rem;text-align:center}.notice{font-size:.82rem;color:var(--muted)}.dark{--bg:#17211a;--paper:#202d23;--ink:#edf5ed;--muted:#a7b6a9;--green:#8ac69a;--green2:#293f2e;--line:#35443a;--shadow:0 12px 34px #00000018}.dark .topbar{background:#17211aeF}.dark .search input,.dark .nav button,.dark .theme-btn,.dark .card,.dark .sidebar,.dark .text-card,.dark .stat,.dark .care-item,.dark .model-controls button,.dark .empty{background:#202d23;color:var(--ink)}.dark .side-link{color:#c4d2c6}.dark .hero p,.dark .card p,.dark .text-card p,.dark .model-info p,.dark .care-item span{color:var(--muted)}.dark .hero-art{background:radial-gradient(circle at 70% 25%,#605a37 0,transparent 28%),linear-gradient(145deg,#293e2d,#36543a)}.dark .viewer{background:radial-gradient(circle at 50% 38%,#314536 0,#202d23 75%)}.dark .viewer-tip{background:#17211add;color:#d8e5d9;border-color:#35443a}.dark .fact{background:#29382d}.dark .callout{background:#403722;border-color:#625336;color:#f0d8a6}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.hero-copy{padding:18px 0 4px}.hero-art{min-height:290px}.layout{grid-template-columns:1fr}.sidebar{position:static;display:flex;gap:4px;overflow:auto;padding:9px}.side-title{display:none}.side-link{white-space:nowrap}.stats{grid-template-columns:repeat(2,1fr)}.model-panel{grid-template-columns:1fr}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.species{grid-template-columns:1fr}}
+@media(max-width:520px){.nav{padding:10px 13px;gap:9px}.brand{font-size:1rem}.brand-mark{width:32px;height:32px}.search{max-width:none}.search input{padding:9px 8px 9px 31px;font-size:.85rem}.search span{left:10px;top:7px}.theme-btn{padding:8px}.nav .nav-label{display:none}.wrap{padding:18px 13px 45px}.hero h1{font-size:2.8rem}.hero-art{min-height:255px}.hero-rabbit{font-size:155px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:1.3rem}.grid3{grid-template-columns:1fr}.section h2{font-size:1.45rem}.card{padding:15px}.quiz{padding:17px}.quiz-options{grid-template-columns:1fr}.viewer,#modelCanvas,.model-fallback{min-height:280px;height:280px}}
+</style>
+</head>
+<body>
+<header class="topbar"><nav class="nav">
+  <div class="brand"><span class="brand-mark">🐇</span><span>Кролипедия</span></div>
+  <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Найти в энциклопедии…" aria-label="Поиск по энциклопедии"></label>
+  <button class="theme-btn" id="themeToggle" title="Переключить тему" aria-label="Переключить тему">☾</button>
+</nav></header>
+<main class="wrap">
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <span class="eyebrow">🌿 Живая энциклопедия</span>
+    <h1>Мир кроликов<br><span>ближе, чем кажется.</span></h1>
+    <p>Изучай повадки, породы, питание и удивительные способности кроликов. Коротко, понятно и с интерактивными материалами.</p>
+    <div class="actions"><button class="primary" onclick="document.querySelector('#basics').scrollIntoView({behavior:'smooth'})">Начать исследование ↘</button><button class="secondary" onclick="document.querySelector('#quiz').scrollIntoView({behavior:'smooth'})">Проверить знания ✦</button></div>
+  </div>
+  <div class="hero-art" aria-label="Иллюстрация кролика"><div class="float-label one">🐾 Познакомься с ними<small>Маленькие исследователи</small></div><div class="hero-rabbit">🐇</div><div class="float-label two">🌱 Любят исследовать<small>И копать, и прыгать!</small></div></div>
+</section>
+<div class="stats">
+  <div class="stat"><strong>2 пары</strong><span>резцов у кроликов</span></div>
+  <div class="stat"><strong>360°</strong><span>почти круговой обзор</span></div>
+  <div class="stat"><strong>Сумерки</strong><span>время активности</span></div>
+  <div class="stat"><strong>Социальные</strong><span>любят общение</span></div>
+</div>
+<div class="layout">
+<aside class="sidebar">
+  <div class="side-title">Содержание</div>
+  <a class="side-link active" href="#basics">🐾 Основы</a>
+  <a class="side-link" href="#species">🌈 Породы</a>
+  <a class="side-link" href="#model">🧊 3D-кролик</a>
+  <a class="side-link" href="#care">🥕 Уход</a>
+  <a class="side-link" href="#facts">💡 Факты</a>
+  <a class="side-link" href="#quiz">🎯 Викторина</a>
+</aside>
+<div class="content" id="content">
+<section class="section searchable" id="basics">
+  <div class="section-head"><div><h2>Кролик: кратко о главном</h2><p>Знакомство с ушастыми млекопитающими</p></div><span class="pill">Статья 01</span></div>
+  <div class="grid3">
+    <article class="card"><div class="card-icon">🦷</div><h3>Зубы растут всю жизнь</h3><p>Резцы и коренные зубы постоянно растут, поэтому кролику важно есть подходящую волокнистую пищу.</p></article>
+    <article class="card"><div class="card-icon">👂</div><h3>Уши — не только слух</h3><p>Уши у многих пород помогают улавливать звуки и участвуют в терморегуляции.</p></article>
+    <article class="card"><div class="card-icon">🌙</div><h3>Активность на рассвете</h3><p>Кролики чаще всего активны на рассвете и в сумерках, хотя домашние питомцы подстраиваются под распорядок семьи.</p></article>
+  </div>
+</section>
+<section class="section searchable" id="species">
+  <div class="section-head"><div><h2>Породы и типы</h2><p>Внешность и характер могут различаться</p></div><span class="pill">Мини-каталог</span></div>
+  <div class="species">
+    <article class="card"><div class="species-art">🐰</div><div><h3>Нидерландский карликовый</h3><p>Компактный кролик с короткими ушами. Нуждается в бережном обращении и пространстве для движения.</p></div></article>
+    <article class="card"><div class="species-art">🐇</div><div><h3>Баран</h3><p>Узнаваем по свисающим ушам. Из-за особенностей ушей важно следить за их здоровьем.</p></div></article>
+    <article class="card"><div class="species-art">☁️</div><div><h3>Ангорский</h3><p>Длинная шерсть требует регулярного ухода и расчёсывания, чтобы не образовывались колтуны.</p></div></article>
+    <article class="card"><div class="species-art">🌫️</div><div><h3>Рекс</h3><p>Известен короткой, бархатистой на ощупь шерстью. Как и любой кролик, нуждается в укрытиях и активности.</p></div></article>
+  </div>
+</section>
+<section class="section searchable" id="model">
+  <div class="section-head"><div><h2>Изучи кролика в 3D</h2><p>Поворачивай модель и рассматривай её со всех сторон</p></div><span class="pill">Интерактив</span></div>
+  <div class="text-card model-panel">
+    <div class="viewer" id="viewer"><canvas id="modelCanvas" aria-label="Интерактивная трёхмерная модель кролика"></canvas><div class="viewer-tip" id="viewerTip">Загружаем 3D-модель… Потяни, чтобы вращать</div></div>
+    <div class="model-info"><span class="eyebrow">🧊 3D-лаборатория</span><h3>Рассмотри форму и детали</h3><p>Потяни модель пальцем или мышью, чтобы повернуть её. Используй колесо мыши или кнопки масштаба. Для работы модели нужен интернет при первой загрузке библиотеки Three.js.</p><div class="model-controls"><button id="rotateBtn">⟳ Автовращение: выкл.</button><button id="zoomIn">＋ Приблизить</button><button id="zoomOut">－ Отдалить</button><button id="resetView">↺ Сброс</button></div><div class="facts"><div class="fact"><b>Слух</b><span>Улавливает тихие звуки</span></div><div class="fact"><b>Обзор</b><span>Глаза по бокам головы</span></div><div class="fact"><b>Прыжок</b><span>Сильные задние лапы</span></div><div class="fact"><b>Усы</b><span>Помогают ориентироваться</span></div></div></div>
+  </div>
+</section>
+<section class="section searchable" id="care">
+  <div class="section-head"><div><h2>Ответственный уход</h2><p>Кролик — не игрушка, а животное со своими потребностями</p></div><span class="pill">Важно</span></div>
+  <div class="care-list">
+    <div class="care-item"><div class="check">✓</div><div><b>Сено и вода должны быть доступны</b><span>Сено — основа рациона большинства домашних кроликов. Рацион уточняют с ветеринаром.</span></div></div>
+    <div class="care-item"><div class="check">✓</div><div><b>Нужно безопасное пространство</b><span>Ежедневное движение, укрытия, нескользкий пол и защита проводов помогают снизить риск травм.</span></div></div>
+    <div class="care-item"><div class="check">✓</div><div><b>Поднимать нужно осторожно</b><span>Поддерживай грудь и заднюю часть тела. Никогда не поднимай кролика за уши.</span></div></div>
+    <div class="care-item"><div class="check">✓</div><div><b>Следи за аппетитом и помётом</b><span>Если кролик перестал есть или испражняться, это может быть срочной ситуацией — свяжись с ветеринаром.</span></div></div>
+  </div>
+  <div class="callout">💛 <b>Важно:</b> кролики обычно не любят, когда их неожиданно хватают. Дай питомцу самому подойти и спокойно знакомься с ним на уровне пола.</div>
+</section>
+<section class="section searchable" id="facts">
+  <div class="section-head"><div><h2>Удивительные факты</h2><p>Несколько особенностей, которые легко пропустить</p></div><span class="pill">Факт-карточки</span></div>
+  <div class="grid3">
+    <article class="card"><div class="card-icon">💨</div><h3>Быстрый старт</h3><p>Мощные задние лапы помогают быстро ускоряться и резко менять направление.</p></article>
+    <article class="card"><div class="card-icon">🧼</div><h3>Чистоплотность</h3><p>Кролики часто ухаживают за шерстью сами, но длинношёрстным породам может требоваться помощь.</p></article>
+    <article class="card"><div class="card-icon">🧠</div><h3>Учёба через привычки</h3><p>Кролики могут узнавать распорядок, осваивать лоток и учиться простым действиям с помощью поощрения.</p></article>
+  </div>
+</section>
+<section class="section searchable" id="quiz">
+  <div class="quiz"><span class="pill">Мини-викторина · 1 вопрос за раз</span><h3 id="quizQuestion">Что должно быть основой рациона большинства домашних кроликов?</h3><div class="quiz-options" id="quizOptions"><button data-answer="0">Сладкие фрукты</button><button data-answer="1">Сено</button><button data-answer="2">Хлеб и печенье</button><button data-answer="3">Только гранулы</button></div><div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div><button class="quiz-next" id="quizNext" hidden>Следующий вопрос →</button></div>
+</section>
+<div class="empty" id="empty">Ничего не найдено. Попробуй другое слово.</div>
+</div></div>
+<footer>Кролипедия · Учись заботиться, а не только умиляться 🐇<br><span class="notice">Материал для общего знакомства, а не замена консультации ветеринара.</span></footer>
+</main>
+<script>
+const themeToggle=document.getElementById('themeToggle');
+themeToggle.addEventListener('click',()=>{document.body.classList.toggle('dark');themeToggle.textContent=document.body.classList.contains('dark')?'☀':'☾'});
+const searchInput=document.getElementById('searchInput'), searchable=[...document.querySelectorAll('.searchable')], empty=document.getElementById('empty');
+searchInput.addEventListener('input',()=>{const q=searchInput.value.trim().toLocaleLowerCase('ru');let found=0;searchable.forEach(s=>{const match=!q||s.innerText.toLocaleLowerCase('ru').includes(q);s.style.display=match?'':'none';if(match)found++});empty.style.display=found?'none':'block';});
+document.querySelectorAll('.side-link').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.side-link').forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
+const questions=[
+{q:'Что должно быть основой рациона большинства домашних кроликов?',a:['Сладкие фрукты','Сено','Хлеб и печенье','Только гранулы'],correct:1,why:'Верно! Сено обеспечивает клетчатку и помогает естественному стачиванию зубов.'},
+{q:'За какую часть тела нельзя поднимать кролика?',a:['Поддерживая грудь и заднюю часть','За уши','Аккуратно поддерживая тело','Ни за какую — лучше всегда поддерживать тело'],correct:1,why:'Правильно. Поднимать кролика за уши нельзя — это может причинить травму.'},
+{q:'Когда кролики часто бывают наиболее активны?',a:['Только в полдень','На рассвете и в сумерках','Только глубокой ночью','Только утром в выходные'],correct:1,why:'Да! Многие кролики особенно активны на рассвете и в сумерках.'},
+{q:'Что делать, если кролик перестал есть?',a:['Подождать несколько дней','Дать печенье','Срочно связаться с ветеринаром','Не обращать внимания'],correct:2,why:'Верно. Отказ от еды может быть опасным для кроликов и требует быстрой оценки ветеринара.'}
+];let qi=0,answered=false;
+function renderQuiz(){const x=questions[qi];document.getElementById('quizQuestion').textContent=x.q;document.getElementById('quizOptions').innerHTML=x.a.map((v,i)=>`<button data-answer="${i}">${v}</button>`).join('');document.getElementById('quizFeedback').textContent='';document.getElementById('quizNext').hidden=true;answered=false;document.querySelectorAll('#quizOptions button').forEach(b=>b.addEventListener('click',()=>{if(answered)return;answered=true;const chosen=+b.dataset.answer;document.querySelectorAll('#quizOptions button').forEach((bb,i)=>{bb.disabled=true;if(i===x.correct)bb.classList.add('correct');if(i===chosen&&chosen!==x.correct)bb.classList.add('wrong')});document.getElementById('quizFeedback').textContent=(chosen===x.correct?'✓ ':'✦ ')+x.why;document.getElementById('quizNext').hidden=false;document.getElementById('quizNext').textContent=qi===questions.length-1?'Пройти заново ↻':'Следующий вопрос →'}))}
+document.getElementById('quizNext').addEventListener('click',()=>{qi=(qi+1)%questions.length;renderQuiz()});renderQuiz();
+</script>
+<script type="module">
+const canvas=document.getElementById('modelCanvas'), tip=document.getElementById('viewerTip');
+let renderer,scene,camera,controls,mixer,clock,root,auto=false;
+const fallback=()=>{document.getElementById('viewer').innerHTML='<div class="model-fallback"><div><span>🐇</span><b>3D-модель не загрузилась</b><p>Положи rabbit_rigged.glb рядом с index.html и открой сайт через веб-сервер или загрузи оба файла на хостинг.</p></div></div>'};
+try{
+ const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+ const {OrbitControls}=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js');
+ const {GLTFLoader}=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js');
+ scene=new THREE.Scene();scene.background=new THREE.Color(document.body.classList.contains('dark')?0x202d23:0xe8f0e6);
+ camera=new THREE.PerspectiveCamera(38,canvas.clientWidth/330,0.1,100);camera.position.set(0,1.1,4.2);
+ renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));renderer.setSize(canvas.clientWidth,330,false);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.shadowMap.enabled=true;
+ scene.add(new THREE.HemisphereLight(0xffffff,0x8ba58a,2));
+ const light=new THREE.DirectionalLight(0xffffff,2.2);light.position.set(3,5,4);scene.add(light);
+ const floor=new THREE.Mesh(new THREE.CircleGeometry(1.4,48),new THREE.MeshBasicMaterial({color:0xcbdcc8,transparent:true,opacity:.65}));floor.rotation.x=-Math.PI/2;floor.position.y=-.8;scene.add(floor);
+ controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.target.set(0,.25,0);controls.minDistance=1.5;controls.maxDistance=7;controls.maxPolarAngle=Math.PI*.85;
+ const loader=new GLTFLoader();
+ loader.load('./rabbit_rigged.glb',g=>{root=g.scene;scene.add(root);const box=new THREE.Box3().setFromObject(root),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());root.position.sub(center);const max=Math.max(size.x,size.y,size.z)||1;root.scale.setScalar(2.1/max);root.position.y=-box.min.y*(2.1/max)-.8; if(g.animations?.length){mixer=new THREE.AnimationMixer(root);g.animations.forEach(a=>mixer.clipAction(a).play())}tip.textContent='Потяни, чтобы вращать · Колесо мыши — масштаб';},undefined,e=>{console.warn(e);fallback()});
+ clock=new THREE.Clock();
+ function animate(){requestAnimationFrame(animate);const dt=clock.getDelta();if(mixer)mixer.update(dt);if(auto&&root)root.rotation.y+=dt*.45;controls.update();renderer.render(scene,camera)}animate();
+ function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false)}new ResizeObserver(resize).observe(document.getElementById('viewer'));
+ document.getElementById('rotateBtn').addEventListener('click',e=>{auto=!auto;e.currentTarget.textContent='⟳ Автовращение: '+(auto?'вкл.':'выкл.')});
+ document.getElementById('zoomIn').addEventListener('click',()=>{camera.position.multiplyScalar(.82);controls.update()});
+ document.getElementById('zoomOut').addEventListener('click',()=>{camera.position.multiplyScalar(1.22);controls.update()});
+ document.getElementById('resetView').addEventListener('click',()=>{camera.position.set(0,1.1,4.2);controls.target.set(0,.25,0);if(root)root.rotation.y=0;controls.update()});
+ const obs=new MutationObserver(()=>{if(scene)scene.background=new THREE.Color(document.body.classList.contains('dark')?0x202d23:0xe8f0e6)});obs.observe(document.body,{attributes:true,attributeFilter:['class']});
+}catch(e){console.warn(e);fallback()}
+</script>
+</body>
+</html>
